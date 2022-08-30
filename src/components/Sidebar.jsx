@@ -14,6 +14,7 @@ const Categories = ({ selectedCategory, setSelectedCategory }) => (
   >
     {categories.map((category) => (
       <button
+      onClickCapture={() => setSelectedCategory(category.name)}
         className="category-btn"
         onClick={() => setSelectedCategory(category.name)}
         style={{
