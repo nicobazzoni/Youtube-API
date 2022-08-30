@@ -15,6 +15,8 @@ const SearchBar = () => {
 
       setSearchTerm('');
     }
+
+    console.log(searchTerm);
   };
 
   return (
