@@ -18,8 +18,8 @@ const Categories = ({ selectedCategory, setSelectedCategory }) => (
         className="category-btn"
         onClick={() => setSelectedCategory(category.name)}
         style={{
-          background: category.name === selectedCategory && "#FC1503",
-          color: "white",
+          background: category.name === selectedCategory && "#01c8ff",
+          color: "black",
         }}
         key={category.name}
       >
