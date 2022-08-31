@@ -13,7 +13,7 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => (// destructured 
           sx={{ width: { xs: '100%', sm: '358px', md: '320px',}, height: 180 }} 
         />
       </Link>
-      <CardContent sx={{ backgroundColor: "#d8d4d4", height: '106px' }}>
+      <CardContent sx={{ backgroundColor: "#ffffff", height: '106px' }}>
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl } >
           <Typography variant="subtitle1" fontWeight="bold" color="#000000">
             {snippet?.title.slice(0, 60) || demoVideoTitle.slice(0, 60)}
@@ -24,6 +24,15 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => (// destructured 
             {snippet?.channelTitle || demoChannelTitle}
             <CheckCircleIcon sx={{ fontSize: "12px", color: "gray", ml: "5px" }} />
           </Typography>
+          
+        </Link>
+
+        <Link to={snippet?.description ? `/channel/${snippet?.description}` : demoChannelUrl} >
+          <Typography variant="subtitle2" color="black">
+            {snippet?.description || demoChannelTitle}
+            <CheckCircleIcon sx={{ fontSize: "12px", color: "red", ml: "5px" }} />
+          </Typography>
+          
         </Link>
       </CardContent>
     </Card>
