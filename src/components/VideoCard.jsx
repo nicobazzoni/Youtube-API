@@ -29,11 +29,12 @@ const VideoCard = ({ video: { id: { videoId }, snippet } }) => (// destructured 
 
         <Link to={snippet?.description ? `/channel/${snippet?.description}` : demoChannelUrl} >
           <Typography variant="subtitle2" color="black">
-            {snippet?.description || demoChannelTitle}
+            {snippet?.description.slice(0, 60) || demoChannelTitle.slice(0, 60)}
             <CheckCircleIcon sx={{ fontSize: "12px", color: "red", ml: "5px" }} />
           </Typography>
-          
         </Link>
+
+        
       </CardContent>
     </Card>
   );

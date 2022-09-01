@@ -16,7 +16,7 @@ const Navbar = () => (
   top: 0, 
   justifyContent: 'space-between',
    border: '2px solid',
-    borderColor: '#b0caf7',
+    borderColor: '#fffefe',
 }}
    >
     <Link to='/' style={{ display: 'flex', alignItems: 'center' }}>
@@ -26,7 +26,12 @@ const Navbar = () => (
     </Link> 
     <SearchBar />
 
+  
+
   </Stack> 
 )
 
 export default Navbar
+
+
+   
